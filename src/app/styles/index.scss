@@ -3,10 +3,6 @@
 @use "themes/light";
 @use "themes/dark";
 
-* {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 .app {
   font: var(--font-m);
 
