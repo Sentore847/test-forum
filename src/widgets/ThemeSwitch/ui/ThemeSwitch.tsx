@@ -1,19 +1,24 @@
-import { ReactNode } from "react";
+import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { classNames } from "shared/lib/classNames/classNames";
 import { Theme, useTheme } from "app/providers/ThemeProvider";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import React from "react";
 import cls from "./ThemeSwitch.module.scss";
 
 interface ThemeSwitchProps {
   className?: string;
-  children?: ReactNode;
 }
 
 export const ThemeSwitch = ({ className }: ThemeSwitchProps) => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button className={cls.btn} onClick={toggleTheme}>
+    <Button
+      theme={ThemeButton.CLEAR}
+      className={classNames(cls.ThemeSwitcher, {}, [className])}
+      onClick={toggleTheme}
+    >
       {theme === Theme.DARK ? <MdLightMode /> : <MdDarkMode />}
-    </button>
+    </Button>
   );
 };
