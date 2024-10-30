@@ -5,7 +5,10 @@
   "scripts": {
     "start": "webpack serve --port 0",
     "build:prod": "webpack --env mode=production",
-    "build:dev": "webpack --env mode=development"
+    "build:dev": "webpack --env mode=development",
+    "lint:ts": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:scss": "stylelint **/*.scss",
+    "lint:scss:fix": "stylelint **/*.scss --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
+    "@eslint/js": "^9.13.0",
     "@types/node": "^22.7.9",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
@@ -23,16 +27,22 @@
     "babel-loader": "^9.2.1",
     "css-loader": "^6.6.0",
     "css-minimizer-webpack-plugin": "^7.0.0",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
     "file-loader": "^6.2.0",
+    "globals": "^15.11.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.9.1",
     "react-icons": "^5.3.0",
     "sass": "^1.80.4",
     "sass-loader": "^16.0.2",
     "style-loader": "^3.3.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.7.4"
   },
