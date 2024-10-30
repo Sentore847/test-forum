@@ -6,14 +6,14 @@
   padding: 7px 10px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%), 0 1px 3px rgb(0 0 0 / 10%);
 }
 
 .btn:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgb(0 0 0 / 20%), 0 3px 6px rgb(0 0 0 / 10%);
 }
 
 .btn:active {
   transform: translateY(2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgb(0 0 0 / 20%), 0 1px 3px rgb(0 0 0 / 10%);
 }
