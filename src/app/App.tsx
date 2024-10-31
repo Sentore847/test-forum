@@ -8,6 +8,7 @@ import "./styles/index.scss";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
+
   return (
     <div className={classNames("app", {}, [theme])}>
       <Suspense fallback={<div>Loading translations...</div>}>
