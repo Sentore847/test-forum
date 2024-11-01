@@ -19,5 +19,6 @@
       "types": ["i18next"],
       "module": "CommonJS"
     }
-  }
+  },
+  "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }
