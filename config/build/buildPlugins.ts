@@ -1,7 +1,7 @@
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { BuildOptions } from "./types/config";
-// import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildPlugins({
@@ -12,10 +12,11 @@ export function buildPlugins({
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
-    // new BundleAnalyzerPlugin({
-    //   openAnalyzer: false,
-    // }),
     new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[contenthash:4].css",
+      chunkFilename: "css/[name].[contenthash:4].css",
+    }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
@@ -23,11 +24,9 @@ export function buildPlugins({
 
   if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin());
-  } else {
     plugins.push(
-      new MiniCssExtractPlugin({
-        filename: "css/[name].[contenthash:4].css",
-        chunkFilename: "css/[name].[contenthash:4].css",
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false,
       })
     );
   }
