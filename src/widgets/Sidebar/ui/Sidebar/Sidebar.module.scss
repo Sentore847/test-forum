@@ -6,6 +6,48 @@
   transition: width 0.3s;
 }
 
+.collapseBtn {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}
+
+.items {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  .sidebarIcon {
+    margin-right: 10px;
+    font-size: 18px;
+    transition: font-size 0.3s;
+  }
+
+  .linkText {
+    transition: opacity 0.3s, width 0.3s;
+  }
+}
+
 .collapsed {
   width: var(--sidebar-width-collapsed);
+
+  .link {
+    .sidebarIcon {
+      font-size: 24px;
+    }
+
+    .linkText {
+      opacity: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  }
 }
