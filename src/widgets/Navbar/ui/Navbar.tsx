@@ -1,4 +1,3 @@
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { ThemeSwitch } from "widgets/ThemeSwitch";
 import { LangSwitch } from "widgets/LangSwitch/LangSwitch";
 import { classNames } from "shared/lib/classNames/classNames";
