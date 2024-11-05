@@ -9,7 +9,7 @@
     "lint:ts": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:scss": "stylelint **/*.scss",
     "lint:scss:fix": "stylelint **/*.scss --fix",
-    "test": "jest --config ./config/jest/jest.config.ts"
+    "test:unit": "jest --config ./config/jest/jest.config.ts"
   },
   "keywords": [],
   "author": "",
