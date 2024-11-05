@@ -4,6 +4,7 @@ import {
   Theme,
   ThemeContext,
 } from "app/providers/ThemeProvider/lib/ThemeContext";
+import React from "react";
 
 const getDefaultTheme = (): Theme => {
   const storedTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
