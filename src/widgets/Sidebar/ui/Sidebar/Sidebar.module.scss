@@ -3,7 +3,7 @@
   width: var(--sidebar-width);
   background: var(--sidebar-bg-color);
   position: relative;
-  transition: width 0.3s;
+  transition: background-color 0.5s ease, color 0.15s ease, width 0.3s;
 }
 
 .collapseBtn {
@@ -29,10 +29,12 @@
     margin-right: 10px;
     font-size: 18px;
     transition: font-size 0.3s;
+    fill: var(--inverted-bg-color);
   }
 
   .linkText {
     transition: opacity 0.3s, width 0.3s;
+    color: var(--primary-color);
   }
 }
 
