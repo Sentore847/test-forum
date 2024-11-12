@@ -5,6 +5,7 @@ import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { MdHome } from "react-icons/md";
 import { IoIosListBox } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 import cls from "./Sidebar.module.scss";
 
 interface SidebarProps {
@@ -14,6 +15,8 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
+
+  const { t } = useTranslation("translation");
 
   const onToggle = () => {
     setCollapsed((prev) => !prev);
@@ -43,7 +46,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
           className={cls.link}
         >
           <MdHome className={cls.sidebarIcon} />
-          {!collapsed && <span>Main</span>}
+          {!collapsed && (
+            <span className={cls.linkText}>{String(t("Main"))}</span>
+          )}
         </AppLink>
         <AppLink
           className={cls.link}
@@ -51,7 +56,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
           to={RoutePath.about}
         >
           <IoIosListBox className={cls.sidebarIcon} />
-          {!collapsed && <span>About</span>}
+          {!collapsed && (
+            <span className={cls.linkText}>{String(t("About"))}</span>
+          )}
         </AppLink>
       </div>
     </div>
