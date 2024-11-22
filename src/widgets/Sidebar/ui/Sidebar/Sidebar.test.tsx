@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom"; // Импортируем BrowserRouter
+import { BrowserRouter } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 import { act } from "react";
 
