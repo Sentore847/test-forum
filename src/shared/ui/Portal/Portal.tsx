@@ -3,12 +3,9 @@ import ReactDOM from "react-dom";
 
 interface PortalProps {
   children: ReactNode;
-  container?: Element;
+  element?: Element;
 }
 
-export const Portal = ({
-  children,
-  container = document.body,
-}: PortalProps) => {
-  return ReactDOM.createPortal(children, container);
+export const Portal = ({ children, element = document.body }: PortalProps) => {
+  return ReactDOM.createPortal(children, element);
 };
