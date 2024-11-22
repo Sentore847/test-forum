@@ -10,16 +10,13 @@ const counterSlice = createSlice({
   name: "counter",
   initialState: initialState,
   reducers: {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    increment(state: CounterSchema) {
+    increment(state) {
       state.value++;
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    decrement(state: CounterSchema) {
+    decrement(state) {
       state.value--;
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    incrementByAmount(state: CounterSchema, action: PayloadAction<number>) {
+    incrementByAmount(state, action: PayloadAction<number>) {
       state.value += action.payload;
     },
   },
