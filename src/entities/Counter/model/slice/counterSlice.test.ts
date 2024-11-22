@@ -17,7 +17,6 @@ describe("counterSlice.test", () => {
   });
 
   test("increment", () => {
-    const state: CounterSchema = { value: 10 };
     expect(
       counterReducer(undefined as CounterSchema, counterActions.increment())
     ).toEqual({ value: 1 });
