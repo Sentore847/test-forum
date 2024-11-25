@@ -3,6 +3,10 @@
 @use "themes/light";
 @use "themes/dark";
 
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);
